@@ -1,0 +1,22 @@
+name: System Planning CI Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  validate-planning-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository Code
+      uses: actions/checkout@v4
+
+    - name: Verify Planning Documents
+      run: |
+        echo "Checking submission requirements..."
+        test -f SQLAssignment.sql || (echo "SQL script missing!" && exit 1)
+        test -f api_plan.pdf || (echo "API plan missing!" && exit 1)
+        echo "All required artifacts successfully verified!"
