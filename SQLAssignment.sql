@@ -1,7 +1,4 @@
 -- ============================================================================
--- RaceDay Database Schema & Seed Script
--- SSMS Target: SQL Server 2019 / 2022 / Azure SQL
--- File Name: schema.sql
 -- ============================================================================
 
 USE master;
@@ -109,7 +106,6 @@ INSERT INTO Roles (role_name) VALUES
 ('Participant');
 
 -- Insert Users (2 Organisers, 2 Participants)
--- Passwords shown are dummy bcrypt hashed strings
 INSERT INTO Users (role_id, first_name, last_name, email, password_hash) VALUES
 (1, 'Sipho', 'Nkosi', 'sipho.organiser@raceday.co.za', '$2a$12$eImiTXuWVxfM37uY4JANjO.GkK92eE8fN8e52U/9Y6p5Y6P5Y6P5Y'), -- User 1 (Organiser 1)
 (1, 'Lindiwe', 'Dlamini', 'lindiwe.events@raceday.co.za', '$2a$12$eImiTXuWVxfM37uY4JANjO.GkK92eE8fN8e52U/9Y6p5Y6P5Y6P5Y'), -- User 2 (Organiser 2)
