@@ -16,3 +16,4 @@ The system enforces Role-Based Access Control (RBAC) across two main user roles:
 * **Participant:**
   * **Description:** General athletes and public users engaging with race events.
   * **Permissions:** Can view public race listings, browse event categories, register/enrol for upcoming events, view personal profile information, and check official event results.
+Screenshot 2026-09-03 205906.png
